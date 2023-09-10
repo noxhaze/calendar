@@ -24,3 +24,11 @@ body {
     min-width: 320px;
     min-height: 100vh;
 }
+
+p {
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+    color: var(--text-color);
+}

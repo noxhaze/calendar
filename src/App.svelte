@@ -1,5 +1,6 @@
 <script lang="ts">
     import DateDisplay from "./components/DateDisplay.svelte";
+    import Calendar from "./components/Calendar.svelte";
 </script>
 
 <center>
@@ -8,5 +9,7 @@
             <h1>Today on,</h1>
             <DateDisplay />
         </div>
+
+        <Calendar />
     </main>
 </center>

@@ -7,13 +7,15 @@
 
     onMount(() => {
         currentMonth = Month.getMonthFromIndex(new Date().getMonth());
+
+
     })
 </script>
 
 <div class="calendar-container">
-    {#each Array(currentMonth.days) as dayNum}
-        <Day num={dayNum} />
-    {/each}
+    <!-- {#each Array(currentMonth.days) as dayNum} -->
+    <!--     <Day num={dayNum} /> -->
+    <!-- {/each} -->
 </div>
 
 <style>

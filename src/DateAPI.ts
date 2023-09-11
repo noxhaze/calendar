@@ -2,13 +2,28 @@ export function getCurrentDateFull(): String {
     return new Date().toDateString();
 }
 
+export class Event {
+    public name: String = "";
+    public description: String = "";
+}
+
+export class Day {
+    public number: Number = 0;
+    public events: Event[] = [];
+
+    constructor(number: Number) {
+        this.number = number;
+    }
+}
+
 export class Month {
     public name: String = "";
-    public days: Number = 0;
+    public daysAmount: number = 0;
+    public days: Day[] = [];
 
-    constructor(cName: String, cDays: Number) {
+    constructor(cName: String, cDays: number) {
         this.name = cName;
-        this.days = cDays;
+        this.daysAmount = cDays;
     }
 
     static getMonthFromIndex(index: Number): Month {
@@ -66,6 +81,11 @@ export class Month {
                 console.error("Invalid index for retrieving month");
                 break;
         }
+        
+        for (let i = 0; i < month.daysAmount; i++) {
+            month.days.push(new Day(i+1));
+        }
+
         return month;
     }
 }

@@ -21,10 +21,11 @@
 
 body {
     margin: 0;
-    display: flex;
-    justify-items: center;
     min-width: 320px;
     min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
 
     font-family: "Fira Code", monospace;
     color: var(--text-color);

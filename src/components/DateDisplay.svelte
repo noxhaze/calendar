@@ -3,5 +3,5 @@
 </script>
 
 <div>
-    <h1>{getCurrentDateFull()}</h1>
+    <h2 style="color: var(--secondary-color)">{getCurrentDateFull()}</h2>
 </div>

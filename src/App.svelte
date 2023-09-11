@@ -2,6 +2,11 @@
     import DateDisplay from "./components/DateDisplay.svelte";
 </script>
 
-<main>
-    <DateDisplay />
-</main>
+<center>
+    <main>
+        <div class="title-area">
+            <h1>Today on,</h1>
+            <DateDisplay />
+        </div>
+    </main>
+</center>

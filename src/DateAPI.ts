@@ -3,8 +3,8 @@ export function getCurrentDateFull(): String {
 }
 
 export class Month {
-    name: String = "";
-    days: Number = 0;
+    public name: String = "";
+    public days: Number = 0;
 
     constructor(cName: String, cDays: Number) {
         this.name = cName;

@@ -1,21 +1,14 @@
 <script lang="ts">
     import { Month } from "../DateAPI";
-    import { onMount } from "svelte";
     import Day from "./Day.svelte";
 
-    let currentMonth: Month;
-
-    onMount(() => {
-        currentMonth = Month.getMonthFromIndex(new Date().getMonth());
-
-
-    })
+    let currentMonth: Month = Month.getMonthFromIndex(new Date().getMonth());
 </script>
 
 <div class="calendar-container">
-    <!-- {#each Array(currentMonth.days) as dayNum} -->
-    <!--     <Day num={dayNum} /> -->
-    <!-- {/each} -->
+    {#each currentMonth.days as day}
+         <Day num={day.number} />
+    {/each}
 </div>
 
 <style>

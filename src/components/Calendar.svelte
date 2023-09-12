@@ -13,9 +13,17 @@
 
 <style>
     .calendar-container {
+        display: grid;
+        padding: 1.5em;
         background-color: var(--tertiary-color);
         border-radius: 1em;
-        width: 45em;
-        height: 35em;
+        width: 20em;
+        height: 15em;
+
+        gap: 0.5em;
+
+        grid-template-rows: repeat(4, 2.5em);
+        /* grid-template-columns: 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em ; */
+        grid-template-columns: repeat(7, 2.5em);
     }
 </style>

@@ -17,11 +17,12 @@
     .day-view {
         background-color: var(--tertiary-color);
         width: 30em;
-        height: 10em;
+        height: 15em;
 
         text-align: left;
         padding: 1em;
         border-radius: 1em;
+        margin-left: 1.5em;
     }
 
     .title {

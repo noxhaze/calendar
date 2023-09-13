@@ -25,3 +25,10 @@
         </div>
     </main>
 </center>
+
+<style>
+    .main-elements-container {
+        display: flex;
+        align-items: center;
+    }
+</style>

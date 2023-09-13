@@ -3,10 +3,14 @@
     import EventView from "./EventView.svelte";
 
     export let day: Day;
+
+    function getTitle(): String {
+        return day.monthName + " " + day.number;
+    }
 </script>
 
 <div class="day-view">
-    <h2 class="title">{day.number}</h2>
+    <h2 class="title">{getTitle()}</h2>
     
     {#each day.events as event}
         <EventView event={event} />

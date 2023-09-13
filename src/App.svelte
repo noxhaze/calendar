@@ -1,6 +1,12 @@
 <script lang="ts">
     import DateDisplay from "./components/DateDisplay.svelte";
+    import DayView from "./components/DayView.svelte";
     import Calendar from "./components/Calendar.svelte";
+    import { currentDayView, CurrentDayView } from "./stores/DayViewStore";
+
+    let dayView: CurrentDayView;
+
+    currentDayView.subscribe((value) => dayView = value);
 </script>
 
 <center>
@@ -11,5 +17,9 @@
         </div>
 
         <Calendar />
+
+        {#if dayView.isVisible}
+            <DayView day={dayView.day} />
+        {/if}
     </main>
 </center>

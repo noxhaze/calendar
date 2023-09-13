@@ -6,7 +6,7 @@
 </script>
 
 <div class="day-view">
-    <h2>{day.number}</h2>
+    <h2 class="title">{day.number}</h2>
     
     {#each day.events as event}
         <EventView event={event} />
@@ -15,8 +15,17 @@
 
 <style>
     .day-view {
-        background-color: var(--background-color);
+        background-color: var(--tertiary-color);
         width: 30em;
         height: 10em;
+
+        text-align: left;
+        padding: 1em;
+        border-radius: 1em;
+    }
+
+    .title {
+        margin-top: 0;
+        color: var(--secondary-color);
     }
 </style>

@@ -1,13 +1,14 @@
 <script lang="ts">
-    import DayView from "./DayView.svelte";
+    import { currentDayView, CurrentDayView } from "../stores/DayViewStore"
     import { Day } from "../DateAPI";
 
     export let day: Day;
 
-    let isDayViewVisible: boolean = false;
-
     function onClick() {
-        isDayViewVisible = !isDayViewVisible;    
+        let newCurrentDayView: CurrentDayView = new CurrentDayView();
+        newCurrentDayView.day = day;
+        newCurrentDayView.isVisible = true;
+        currentDayView.set(newCurrentDayView);
     }
 </script>
 
@@ -15,10 +16,6 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:click={onClick} class="day-container">
     <p>{day.number}</p>
-
-    {#if isDayViewVisible} 
-        <DayView day={day} />
-    {/if}
 </div>
 
 <style>

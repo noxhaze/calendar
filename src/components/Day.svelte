@@ -1,15 +1,24 @@
 <script lang="ts">
-    export let num: Number;
+    import DayView from "./DayView.svelte";
+    import { Day } from "../DateAPI";
+
+    export let day: Day;
+
+    let isDayViewVisible: boolean = false;
 
     function onClick() {
-        
+        isDayViewVisible = !isDayViewVisible;    
     }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:click={onClick} class="day-container">
-    <p>{num}</p>
+    <p>{day.number}</p>
+
+    {#if isDayViewVisible} 
+        <DayView day={day} />
+    {/if}
 </div>
 
 <style>

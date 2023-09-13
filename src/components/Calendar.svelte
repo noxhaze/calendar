@@ -7,7 +7,7 @@
 
 <div class="calendar-container">
     {#each currentMonth.days as day}
-         <Day num={day.number} />
+         <Day day={day} />
     {/each}
 </div>
 

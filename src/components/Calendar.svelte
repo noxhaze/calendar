@@ -23,7 +23,6 @@
         gap: 0.5em;
 
         grid-template-rows: repeat(4, 2.5em);
-        /* grid-template-columns: 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em 2.5em ; */
         grid-template-columns: repeat(7, 2.5em);
     }
 </style>

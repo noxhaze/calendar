@@ -16,10 +16,12 @@
             <DateDisplay />
         </div>
 
-        <Calendar />
+        <div class="main-elements-container">
+            <Calendar />
 
-        {#if dayView.isVisible}
-            <DayView day={dayView.day} />
-        {/if}
+            {#if dayView.isVisible}
+                <DayView day={dayView.day} />
+            {/if}
+        </div>
     </main>
 </center>

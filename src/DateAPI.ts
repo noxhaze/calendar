@@ -9,10 +9,12 @@ export class Event {
 
 export class Day {
     public number: Number = 0;
+    public monthName: String = "";
     public events: Event[] = [];
 
-    constructor(number: Number) {
+    constructor(number: Number, monthName: String) {
         this.number = number;
+        this.monthName = monthName;
     }
 }
 
@@ -83,7 +85,7 @@ export class Month {
         }
         
         for (let i = 0; i < month.daysAmount; i++) {
-            month.days.push(new Day(i+1));
+            month.days.push(new Day(i+1, month.name));
         }
 
         return month;

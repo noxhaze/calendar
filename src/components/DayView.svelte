@@ -12,3 +12,11 @@
         <EventView event={event} />
     {/each}
 </div>
+
+<style>
+    .day-view {
+        background-color: var(--background-color);
+        width: 30em;
+        height: 10em;
+    }
+</style>

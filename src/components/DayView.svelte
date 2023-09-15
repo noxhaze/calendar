@@ -16,6 +16,10 @@
     {#each day.events as event}
         <EventView event={event} />
     {/each}
+
+    <div class="add-event-container"> 
+        <button class="transparent-button">+</button>
+    </div>
 </div>
 
 <style>

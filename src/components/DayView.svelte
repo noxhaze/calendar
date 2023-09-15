@@ -2,6 +2,7 @@
     import { Day, Event } from "../DateAPI";
     import { currentDayView } from "../stores/DayViewStore";
     import EventView from "./EventView.svelte";
+    import AddEventModal from "./AddEventModal.svelte";
 
     export let day: Day;
 
@@ -9,7 +10,11 @@
     let formattedTitle: String = "";
     $: formattedTitle = day.monthName + " " + day.number;
 
+    let modalIsVisible: boolean = false;
+
     function addEvent() {
+        day.events = [...day.events, new Event("Test Event", "Test event description")];
+        modalIsVisible = true;
     }
 </script>
 
@@ -23,6 +28,10 @@
     <div class="add-event-container"> 
         <button on:click={addEvent} class="transparent-button">+</button>
     </div>
+
+    {#if modalIsVisible}
+        <AddEventModal />
+    {/if}
 </div>
 
 <style>

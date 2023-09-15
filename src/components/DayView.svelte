@@ -26,7 +26,9 @@
     {/each}
 
     <div class="add-event-container"> 
-        <button on:click={addEvent} class="transparent-button">+</button>
+        <div class="modal-container">
+            <button on:click={addEvent} class="transparent-button">+</button>
+        </div>
     </div>
 
     {#if modalIsVisible}
@@ -44,6 +46,14 @@
         padding: 1em;
         border-radius: 1em;
         margin-left: 1.5em;
+    }
+
+    .modal-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
     }
 
     .title {

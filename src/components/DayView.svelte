@@ -1,16 +1,17 @@
 <script lang="ts">
     import { Day } from "../DateAPI";
+    import { currentDayView } from "../stores/DayViewStore";
     import EventView from "./EventView.svelte";
 
     export let day: Day;
 
-    function getTitle(): String {
-        return day.monthName + " " + day.number;
-    }
+    currentDayView.subscribe((res) => day = res.day);
+    let formattedTitle: String = "";
+    $: formattedTitle = day.monthName + " " + day.number;
 </script>
 
 <div class="day-view">
-    <h2 class="title">{getTitle()}</h2>
+    <h2 class="title">{formattedTitle}</h2>
     
     {#each day.events as event}
         <EventView event={event} />

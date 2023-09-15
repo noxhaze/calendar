@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Day } from "../DateAPI";
+    import { Day, Event } from "../DateAPI";
     import { currentDayView } from "../stores/DayViewStore";
     import EventView from "./EventView.svelte";
 
@@ -10,7 +10,6 @@
     $: formattedTitle = day.monthName + " " + day.number;
 
     function addEvent() {
-
     }
 </script>
 

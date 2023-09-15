@@ -8,6 +8,10 @@
     currentDayView.subscribe((res) => day = res.day);
     let formattedTitle: String = "";
     $: formattedTitle = day.monthName + " " + day.number;
+
+    function addEvent() {
+
+    }
 </script>
 
 <div class="day-view">
@@ -18,7 +22,7 @@
     {/each}
 
     <div class="add-event-container"> 
-        <button class="transparent-button">+</button>
+        <button on:click={addEvent} class="transparent-button">+</button>
     </div>
 </div>
 

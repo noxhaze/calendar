@@ -1,11 +1,31 @@
+<script lang="ts">
+    export let nameInput: String = "";
+    export let descriptionInput: String = "";
+</script>
+
 <div class="add-event-modal-container">
     <h2 class="title">Add Event</h2>
+
+    <div class="input-container">
+        <label for="nameInput">Name</label>
+        <input bind:value={nameInput} type="text" id="nameInput">
+        <label for="descriptionInput">Description</label>
+        <input bind:value={descriptionInput} type="text" id="descriptionInput">
+    </div>
 </div>
 
 <style>
     .title {
         margin-top: 0;
         color: var(--secondary-color);
+    }
+
+    .input-container {
+        display: grid;
+        grid-template-rows: repeat(2, 1em);
+        grid-template-columns: repeat(2, 10em);
+        grid-row-gap: 1em;
+        grid-column-gap: 9.75em;
     }
 
     .add-event-modal-container {

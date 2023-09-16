@@ -28,6 +28,10 @@
         grid-column-gap: 9.75em;
     }
 
+    label {
+        font-size: .9em;
+    }
+
     .add-event-modal-container {
         display: block;
         position: fixed;

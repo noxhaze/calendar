@@ -2,8 +2,8 @@
     export let nameInput: String = "";
     export let descriptionInput: String = "";
 
-    function submit() {
-
+    function submit(e: any) {
+        e.preventDefault();
     }
 </script>
 
@@ -18,7 +18,7 @@
     </div>
 
     <center>
-        <button class="submit-button normal" on:click={submit}>Add</button>
+        <button class="submit-button normal" on:click={(e) => submit(e)}>Add</button>
     </center>
 </div>
 

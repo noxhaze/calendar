@@ -23,9 +23,8 @@
     .input-container {
         display: grid;
         grid-template-rows: repeat(2, 1em);
-        grid-template-columns: repeat(2, 10em);
-        grid-row-gap: 1em;
-        grid-column-gap: 9.75em;
+        grid-template-columns: repeat(2, 15em);
+        grid-row-gap: 3em;
     }
 
     label {

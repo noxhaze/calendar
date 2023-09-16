@@ -8,9 +8,9 @@
 
     <div class="input-container">
         <label for="nameInput">Name</label>
-        <input bind:value={nameInput} type="text" id="nameInput">
+        <input placeholder="Type name..." bind:value={nameInput} type="text" id="nameInput">
         <label for="descriptionInput">Description</label>
-        <input bind:value={descriptionInput} type="text" id="descriptionInput">
+        <input placeholder="Type description..." bind:value={descriptionInput} type="text" id="descriptionInput">
     </div>
 </div>
 

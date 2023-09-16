@@ -64,6 +64,16 @@ button.normal {
     padding-right: 1em;
 
     border-radius: 0.5em;
+
+    transition: all 0.1s ease-in-out;
+}
+
+button.normal:hover {
+    background-color: hsla(0, 50%, 55%, 1);
+}
+
+button.normal:focus {
+    background-color: hsla(0, 50%, 50%, 1);
 }
 
 input[type=text] {

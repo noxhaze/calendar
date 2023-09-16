@@ -1,6 +1,10 @@
 <script lang="ts">
     export let nameInput: String = "";
     export let descriptionInput: String = "";
+
+    function submit() {
+
+    }
 </script>
 
 <div class="add-event-modal-container">
@@ -12,12 +16,20 @@
         <label for="descriptionInput">Description</label>
         <input placeholder="Type description..." bind:value={descriptionInput} type="text" id="descriptionInput">
     </div>
+
+    <center>
+        <button class="submit-button" on:click={submit}>Add</button>
+    </center>
 </div>
 
 <style>
     .title {
         margin-top: 0;
         color: var(--secondary-color);
+    }
+
+    .submit-button {
+        margin-top: 3.5em;
     }
 
     .input-container {
@@ -35,7 +47,7 @@
         display: block;
         position: fixed;
         width: 30em;
-        height: 10em;
+        height: 13em;
 
         left: 50%;
         top: 50%;

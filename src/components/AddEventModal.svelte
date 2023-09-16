@@ -1,10 +1,17 @@
 <script lang="ts">
+    import { createEventDispatcher } from "svelte";
+    import { type Submit } from "../Types";
+
     export let nameInput: String = "";
     export let descriptionInput: String = "";
 
     function submit(e: any) {
         e.preventDefault();
+
+        submitEventDispatcher("submit", {name: nameInput, description: descriptionInput} as Submit);
     }
+
+    const submitEventDispatcher = createEventDispatcher();
 </script>
 
 <div class="add-event-modal-container">

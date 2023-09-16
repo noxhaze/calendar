@@ -18,7 +18,7 @@
     </div>
 
     <center>
-        <button class="submit-button" on:click={submit}>Add</button>
+        <button class="submit-button normal" on:click={submit}>Add</button>
     </center>
 </div>
 
@@ -29,7 +29,7 @@
     }
 
     .submit-button {
-        margin-top: 3.5em;
+        margin-top: 3.25em;
     }
 
     .input-container {
@@ -47,7 +47,7 @@
         display: block;
         position: fixed;
         width: 30em;
-        height: 13em;
+        height: 13.5em;
 
         left: 50%;
         top: 50%;

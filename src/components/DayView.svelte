@@ -26,7 +26,7 @@
     {/each}
 
     <div class="add-event-container"> 
-            <button on:click={addEvent} class="transparent-button">+</button>
+        <button on:click={addEvent} class="transparent-button">+</button>
     </div>
 
     {#if modalIsVisible}
@@ -62,5 +62,6 @@
     .title {
         margin-top: 0;
         color: var(--secondary-color);
+        margin-bottom: 0;
     }
 </style>

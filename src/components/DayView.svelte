@@ -30,7 +30,9 @@
     </div>
 
     {#if modalIsVisible}
-        <div class="modal-container">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div on:click|self={() => modalIsVisible = false} class="modal-container">
             <AddEventModal />
         </div>
     {/if}

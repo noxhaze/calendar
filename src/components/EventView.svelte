@@ -17,6 +17,8 @@
         background-color: var(--background-color);
         border-radius: 1em;
         padding: 0.5em;
+
+        margin-top: .75em;
     }
 
     hr {

@@ -13,8 +13,11 @@
     let modalIsVisible: boolean = false;
 
     function addEvent() {
-        day.events = [...day.events, new Event("Test Event", "Test event description")];
         modalIsVisible = true;
+    }
+
+    function handleSubmit(e: any) {
+        day.events = [...day.events, new Event(e.detail.name, e.detail.description)]
     }
 </script>
 
@@ -33,7 +36,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div on:click|self={() => modalIsVisible = false} class="modal-container">
-            <AddEventModal />
+            <AddEventModal on:submit={(e) => handleSubmit(e)} />
         </div>
     {/if}
 </div>

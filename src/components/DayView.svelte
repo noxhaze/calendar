@@ -62,6 +62,10 @@
         background-color: rgba(0.1, 0.1, 0.1, 0.25);
     }
 
+    .add-event-container {
+        margin-top: 0.5em;
+    }
+
     .title {
         margin-top: 0;
         color: var(--secondary-color);

@@ -1,10 +1,12 @@
 <script lang="ts">
-    import { onDestroy } from "svelte";
+    import { onDestroy, onMount } from "svelte";
     import { Month } from "../DateAPI";
     import Day from "./Day.svelte";
     import { saveMonthToLocalStorage } from "../LocalStorageAPI";
 
     let currentMonth: Month = Month.getMonthFromIndex(new Date().getMonth());
+
+    onMount(() => saveMonthToLocalStorage(currentMonth));
 
     onDestroy(() => {
         saveMonthToLocalStorage(currentMonth); 

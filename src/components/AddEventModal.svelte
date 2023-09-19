@@ -9,6 +9,9 @@
         e.preventDefault();
 
         submitEventDispatcher("submit", {name: nameInput, description: descriptionInput} as Submit);
+
+        nameInput = "";
+        descriptionInput = "";
     }
 
     const submitEventDispatcher = createEventDispatcher();

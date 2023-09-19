@@ -17,7 +17,7 @@
     }
 
     function handleSubmit(e: any) {
-        day.events = [...day.events, new Event(e.detail.name, e.detail.description)]
+        day.events = [...day.events, new Event(e.detail.name, e.detail.description, e.detail.time)]
         modalIsVisible = false;
     }
 </script>

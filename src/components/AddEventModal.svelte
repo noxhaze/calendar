@@ -4,11 +4,12 @@
 
     export let nameInput: String = "";
     export let descriptionInput: String = "";
+    export let timeInput: String = "";
 
     function submit(e: any) {
         e.preventDefault();
 
-        submitEventDispatcher("submit", {name: nameInput, description: descriptionInput} as Submit);
+        submitEventDispatcher("submit", {name: nameInput, description: descriptionInput, time: timeInput} as Submit);
 
         nameInput = "";
         descriptionInput = "";
@@ -25,6 +26,8 @@
         <input placeholder="Type name..." bind:value={nameInput} type="text" id="nameInput">
         <label for="descriptionInput">Description</label>
         <input placeholder="Type description..." bind:value={descriptionInput} type="text" id="descriptionInput">
+        <label for="timeInput">When</label>
+        <input bind:value={timeInput} type="time" id="timeInput">
     </div>
 
     <center>
@@ -44,7 +47,7 @@
 
     .input-container {
         display: grid;
-        grid-template-rows: repeat(2, 1em);
+        grid-template-rows: repeat(3, 1em);
         grid-template-columns: repeat(2, 15em);
         grid-row-gap: 3em;
     }
@@ -57,7 +60,7 @@
         display: block;
         position: fixed;
         width: 30em;
-        height: 13.5em;
+        height: 17.5em;
 
         left: 50%;
         top: 50%;

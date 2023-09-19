@@ -1,8 +1,14 @@
 <script lang="ts">
+    import { onDestroy } from "svelte";
     import { Month } from "../DateAPI";
     import Day from "./Day.svelte";
+    import { saveMonthToLocalStorage } from "../LocalStorageAPI";
 
     let currentMonth: Month = Month.getMonthFromIndex(new Date().getMonth());
+
+    onDestroy(() => {
+        saveMonthToLocalStorage(currentMonth); 
+    })
 </script>
 
 <div class="calendar-container">

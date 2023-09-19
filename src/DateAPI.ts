@@ -5,6 +5,7 @@ export function getCurrentDateFull(): String {
 export class Event {
     public name: String = "";
     public description: String = "";
+    public time: String = "";
 
     constructor(name: String = "", description: String = "") {
         this.name = name;

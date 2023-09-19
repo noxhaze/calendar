@@ -21,8 +21,6 @@
         border-radius: 1em;
         padding: 0.5em;
 
-        overflow-y: auto;
-
         margin-top: .75em;
     }
 
@@ -39,8 +37,14 @@
 
     .name {
         font-size: 1em;
+
         margin-top: 0;
         color: var(--primary-color);
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 23em;
     }
 
     .description {

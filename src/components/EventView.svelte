@@ -8,7 +8,7 @@
     <div class="title-headline">
         <p class="name">{event.name}</p>
         {#if event.time !== ""}
-            <p class="name"></p>
+            <p class="name">{event.time}</p>
         {/if}
     </div>
     <hr>

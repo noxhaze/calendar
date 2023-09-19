@@ -21,6 +21,8 @@
         border-radius: 1em;
         padding: 0.5em;
 
+        overflow-y: auto;
+
         margin-top: .75em;
     }
 
@@ -42,6 +44,8 @@
     }
 
     .description {
+        white-space: initial;
+        word-wrap: break-word;
         font-size: 0.75em;
     }
 </style>

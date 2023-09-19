@@ -5,11 +5,14 @@
 </script>
 
 <div class="event-view">
-    <span>
+    <div class="title-headline">
         <p class="name">{event.name}</p>
-        <hr>
-        <p class="description">{event.description}</p>
-    </span>
+        {#if event.time !== ""}
+            <p class="name"></p>
+        {/if}
+    </div>
+    <hr>
+    <p class="description">{event.description}</p>
 </div>
 
 <style>

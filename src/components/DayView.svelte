@@ -44,6 +44,7 @@
 
 <style>
     .day-view {
+        overflow-y: scroll;
         background-color: var(--tertiary-color);
         width: 30em;
         height: 15em;

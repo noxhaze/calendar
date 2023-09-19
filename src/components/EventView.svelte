@@ -24,6 +24,13 @@
         margin-top: .75em;
     }
 
+    .title-headline {
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-template-columns: 8em 4em;
+    }
+
     hr {
         margin-top: -0.5em;
     }

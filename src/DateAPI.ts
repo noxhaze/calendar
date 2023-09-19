@@ -7,9 +7,10 @@ export class Event {
     public description: String = "";
     public time: String = "";
 
-    constructor(name: String = "", description: String = "") {
+    constructor(name: String = "", description: String = "", time: String = "") {
         this.name = name;
         this.description = description;
+        this.time = time;
     }
 }
 

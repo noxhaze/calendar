@@ -28,7 +28,7 @@
         display: grid;
 
         grid-template-rows: auto;
-        grid-template-columns: 8em 4em;
+        grid-template-columns: 25em 4em;
     }
 
     hr {

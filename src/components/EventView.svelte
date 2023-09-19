@@ -48,8 +48,13 @@
     }
 
     .description {
-        white-space: initial;
-        word-wrap: break-word;
         font-size: 0.75em;
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp:3;
+        -webkit-box-orient: vertical;
+        max-width: auto;
     }
 </style>

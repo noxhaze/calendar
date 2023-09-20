@@ -12,7 +12,7 @@
 <center>
     <main>
         <div class="title-area">
-            <h1>Today on,</h1>
+            <h1>Today on</h1>
             <DateDisplay />
         </div>
 

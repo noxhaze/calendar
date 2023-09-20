@@ -101,3 +101,12 @@ input[type=text] {
 input[type=text]:focus {
     border-bottom-color: var(--primary-color);
 }
+
+input[type=time] {
+    outline: none;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    font-size: .8em;
+    font-family: "Fira Code", monospace;
+}

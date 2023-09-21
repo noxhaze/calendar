@@ -6,7 +6,9 @@
 
     let currentMonth: Month = Month.getMonthFromIndex(new Date().getMonth());
 
-    onMount(() => currentMonth = retrieveMonthFromLocalStorage());
+    onMount(() => {
+        currentMonth = retrieveMonthFromLocalStorage()
+    });
 
     window.onbeforeunload = () => {
         saveMonthToLocalStorage(currentMonth);

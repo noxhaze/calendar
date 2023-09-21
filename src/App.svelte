@@ -3,10 +3,20 @@
     import DayView from "./components/DayView.svelte";
     import Calendar from "./components/Calendar.svelte";
     import { currentDayView, CurrentDayView } from "./stores/DayViewStore";
+    import { currentYear } from "./stores/DateAPIStore";
+    import { Year } from "./DateAPI";
+    import { saveYearToLocalStorage } from "./LocalStorageAPI";
 
     let dayView: CurrentDayView;
+    let year: Year;
 
     currentDayView.subscribe((value) => dayView = value);
+
+    currentYear.subscribe((val) => year = val);
+
+    window.onbeforeunload = () => {
+        saveYearToLocalStorage(year);
+    };
 </script>
 
 <center>

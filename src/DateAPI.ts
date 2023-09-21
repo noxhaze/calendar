@@ -116,12 +116,12 @@ export class Year {
     constructor(yearNumber: number) {
         this.yearNumber = yearNumber;
 
-        this.checkLeapYear();
-        this.setFebruaryMonth();
-        
         for (let i = 0; i < 12; i++) {
             this.months.push(Month.getMonthFromIndex(i));
         }
+
+        this.checkLeapYear();
+        this.setFebruaryMonth();
     } 
 }
 

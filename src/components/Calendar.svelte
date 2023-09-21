@@ -18,9 +18,11 @@
 </script>
 
 <div class="calendar-container">
-    {#each currentMonth.days as day}
-         <Day day={day} />
-    {/each}
+    {#if currentMonth.days.length !== 0}
+        {#each currentMonth.days as day}
+             <Day day={day} />
+        {/each}
+    {/if}
 </div>
 
 <style>

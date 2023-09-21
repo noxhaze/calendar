@@ -118,6 +118,10 @@ export class Year {
 
         this.checkLeapYear();
         this.setFebruaryMonth();
+        
+        for (let i = 0; i < 12; i++) {
+            this.months.push(Month.getMonthFromIndex(i));
+        }
     } 
 }
 

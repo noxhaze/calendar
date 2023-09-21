@@ -99,4 +99,26 @@ export class Month {
     }
 }
 
+export class Year {
+    months: Month[] = [];
+    yearNumber: number = 0;
+    isLeapYear: boolean = false;
+
+    checkLeapYear() {
+        this.isLeapYear = (this.yearNumber % 4 == 0) ? true : false;
+    }
+
+    setFebruaryMonth() {
+        this.months[1].daysAmount = (this.isLeapYear) ? 29 : 28;
+
+    }
+
+    constructor(yearNumber: number) {
+        this.yearNumber = yearNumber;
+
+        this.checkLeapYear();
+        this.setFebruaryMonth();
+    } 
+}
+
 

@@ -47,4 +47,8 @@
         display: flex;
         align-items: center;
     }
+
+    .title-area {
+        margin-bottom: 1em;
+    }
 </style>

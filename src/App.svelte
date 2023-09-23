@@ -18,7 +18,7 @@
     };
 
     function incrementMonth() {
-
+        
     }
 
     function decrementMonth() {

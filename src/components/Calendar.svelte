@@ -12,7 +12,7 @@
 </script>
 
 <div class="calendar-container">
-    {#if currentMonth.days.length !== 0}
+    {#if currentMonth !== undefined}
         {#each currentMonth.days as day}
              <Day day={day} />
         {/each}

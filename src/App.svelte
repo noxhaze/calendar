@@ -23,6 +23,11 @@
         <div class="title-area">
             <h1>Today on</h1>
             <DateDisplay />
+
+            <div class="month-change-container">
+                <button class="transparent-button">-</button>
+                <button class="transparent-button">+</button>
+            </div>
         </div>
 
         <div class="main-elements-container">

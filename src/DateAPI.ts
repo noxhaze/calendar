@@ -121,6 +121,14 @@ export class Year {
         } 
     }
 
+    getNextMonth(index: number): Month {
+        if (index != 11) {
+            return this.months[index+1];
+        } else {
+            return new Year(this.yearNumber+1).months[0];
+        } 
+    }
+
     constructor(yearNumber: number) {
         this.yearNumber = yearNumber;
 

@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import { retrieveMonthFromLocalStorage, retrieveYearFromLocalStorage } from "../LocalStorageAPI";
+import { retrieveYearFromLocalStorage } from "../LocalStorageAPI";
 
 export const currentYear = writable(retrieveYearFromLocalStorage());
-export const currentMonth = writable(retrieveMonthFromLocalStorage());
+export const currentMonthIndex = writable(new Date().getMonth());

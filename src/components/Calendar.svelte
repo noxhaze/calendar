@@ -2,21 +2,23 @@
     import { onMount } from "svelte";
     import { Month, Year } from "../DateAPI";
     import Day from "./Day.svelte";
-    import { currentYear } from "../stores/DateAPIStore";
+    import { currentYear, currentMonthIndex } from "../stores/DateAPIStore";
 
-    let currentMonth: Month;
+    let month: Month;
+    let monthIndex: number;
     let year: Year;
 
     currentYear.subscribe((val) => year = val);
+    currentMonthIndex.subscribe((val) => monthIndex = val);
 
     onMount(() => {
-        currentMonth = year.months[new Date().getMonth()];
+        month = year.months[monthIndex];
     });
 </script>
 
 <div class="calendar-container">
-    {#if currentMonth !== undefined}
-        {#each currentMonth.days as day}
+    {#if month !== undefined}
+        {#each month.days as day}
              <Day day={day} />
         {/each}
     {/if}

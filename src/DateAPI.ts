@@ -116,7 +116,7 @@ export class Year {
     getPreviousMonth(index: number): Month {
         if (index != 0) {
             return this.months[index-1];
-        } else{
+        } else {
             return new Year(this.yearNumber-1).months[11];
         } 
     }

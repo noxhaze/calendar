@@ -1,4 +1,4 @@
 import { writable } from "svelte/store";
-import { Year } from "../DateAPI";
+import { retrieveYearFromLocalStorage } from "../LocalStorageAPI";
 
-export const currentYear = writable(new Year(new Date().getFullYear()));
+export const currentYear = writable(retrieveYearFromLocalStorage());

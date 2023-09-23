@@ -2,9 +2,12 @@
     import { onMount } from "svelte";
     import { Month, Year } from "../DateAPI";
     import Day from "./Day.svelte";
+    import { currentYear } from "../stores/DateAPIStore";
 
     let currentMonth: Month;
-    export let year: Year;
+    let year: Year;
+
+    currentYear.subscribe((val) => year = val);
 
     onMount(() => {
         currentMonth = year.months[new Date().getMonth()];

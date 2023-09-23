@@ -11,7 +11,6 @@
     let year: Year;
 
     currentDayView.subscribe((value) => dayView = value);
-
     currentYear.subscribe((val) => year = val);
 
     window.onbeforeunload = () => {
@@ -27,7 +26,9 @@
         </div>
 
         <div class="main-elements-container">
-            <Calendar year={year} />
+            {#if year !== undefined || year !== null}
+                <Calendar />
+            {/if}
 
             {#if dayView.isVisible}
                 <DayView day={dayView.day} />

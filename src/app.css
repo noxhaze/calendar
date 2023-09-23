@@ -51,6 +51,10 @@ button.transparent-button:hover {
     filter: brightness(135%);
 }
 
+button.alternate-transparent {
+    background: var(--tertiary-color);
+}
+
 button.normal {
     color: var(--text-color);
     border: none;

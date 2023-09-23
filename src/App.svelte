@@ -25,8 +25,8 @@
             <DateDisplay />
 
             <div class="month-change-container">
-                <button class="transparent-button">-</button>
-                <button class="transparent-button">+</button>
+                <button class="transparent-button alternate-transparent">-</button>
+                <button class="transparent-button alternate-transparent">+</button>
             </div>
         </div>
 

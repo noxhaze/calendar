@@ -27,7 +27,7 @@
         </div>
 
         <div class="main-elements-container">
-            <Calendar />
+            <Calendar year={year} />
 
             {#if dayView.isVisible}
                 <DayView day={dayView.day} />

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { Month, Year } from "../DateAPI";
     import Day from "./Day.svelte";
     import { currentYear, currentMonthIndex } from "../stores/DateAPIStore";
@@ -11,9 +10,7 @@
     currentYear.subscribe((val) => year = val);
     currentMonthIndex.subscribe((val) => monthIndex = val);
 
-    onMount(() => {
-        month = year.months[monthIndex];
-    });
+    $: month = year.months[monthIndex];
 </script>
 
 <div class="calendar-container">

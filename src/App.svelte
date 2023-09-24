@@ -21,9 +21,11 @@
 
     function incrementMonth() {
         currentMonthIndex.set((monthIndex < 11) ? monthIndex++ : 11);
+        currentMonthIndex.set((monthIndex < 11) ? monthIndex++ : 11);
     }
 
     function decrementMonth() {
+        currentMonthIndex.set((monthIndex > 0) ? monthIndex-- : 0);
         currentMonthIndex.set((monthIndex > 0) ? monthIndex-- : 0);
     }
 </script>
